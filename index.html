@@ -4,58 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الممرض زين العابدين البديري</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            margin-top: 30px;
-        }
-        img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        p {
-            font-size: 18px;
-            color: #555;
-        }
-        .contact {
-            background: #27ae60;
+            background-color: #121212;
             color: white;
-            padding: 10px;
+            font-family: 'Tajawal', sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 50px;
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        /* تحسين الصورة */
+        .profile-container {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .profile {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #27ae60;
+            box-shadow: 0 0 20px rgba(39, 174, 96, 0.8);
+            transition: 0.4s ease-in-out;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* تأثير عند تمرير الماوس */
+        .profile:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(39, 174, 96, 1);
+        }
+
+        /* أنيميشن عند تحميل الموقع */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* زر الاتصال وواتساب */
+        .contact-btn, .whatsapp-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 20px;
             border-radius: 5px;
             text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
         }
-        .contact:hover {
+
+        .contact-btn {
+            background: #27ae60;
+            color: white;
+        }
+
+        .contact-btn:hover {
             background: #218c53;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 220px;
+            margin: 20px auto;
+        }
+
+        .whatsapp-btn img {
+            width: 25px;
+            margin-right: 10px;
+        }
+
+        /* خدمات */
+        .services {
+            margin-top: 30px;
+        }
+
+        .service-box {
+            background: #2c2c2c;
+            padding: 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .service-box:hover {
+            transform: scale(1.05);
+            background: #27ae60;
+        }
+
+        /* خريطة */
+        iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <img src="profile.jpg" alt="الممرض زين العابدين البديري">
-        <h1>الممرض الجامعي زين العابدين محمد رحيم البديري</h1>
-        <p>كافة الخدمات التمريضية - خدمة التمريض المنزلي - الاستشارات الطبية - العناية بالقدم السكري - العناية بالحروق</p>
+        <!-- تحسين صورة البروفايل -->
+        <div class="profile-container">
+            <img src="profile.jpg" alt="الممرض زين العابدين البديري" class="profile">
+        </div>
+
+        <h1>الممرض الجامعي زين العابدين البديري</h1>
+        <p>كافة الخدمات التمريضية - خدمة التمريض المنزلي - العناية بالقدم السكري - العناية بالحروق - الاستشارات الطبية</p>
         <p><strong>الخدمة متوفرة على مدار الساعة</strong></p>
+
         <h3>📞 للتواصل:</h3>
         <p>07802264904 | 07801161501</p>
-        <a href="tel:07802264904" class="contact">اتصل الآن</a>
+        <a href="tel:07802264904" class="contact-btn">📞 اتصل الآن</a>
+        <a href="https://wa.me/07802264904" class="whatsapp-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب">
+            تواصل عبر واتساب
+        </a>
+
+        <!-- قسم الخدمات -->
+        <div class="services row mt-4">
+            <h2>🔹 خدماتنا</h2>
+            <div class="col-md-6">
+                <div class="service-box">
+<h4>🏠 التمريض المنزلي</h4>
+                    <p>نقدم خدمات تمريض منزلية على مدار الساعة بأفضل جودة.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-box">
+                    <h4>🔥 العناية بالحروق</h4>
+                    <p>رعاية متخصصة للحروق لتجنب الالتهابات وتسريع الشفاء.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="service-box">
+                    <h4>🩺 الاستشارات الطبية</h4>
+                    <p>احصل على استشارات طبية دقيقة لجميع الحالات.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="service-box">
+                    <h4>🦶 العناية بالقدم السكري</h4>
+                    <p>رعاية متكاملة للوقاية والعلاج من مشاكل القدم السكري.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- خريطة الموقع -->
+        <h2 class="mt-4">📍 موقعنا</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
     </div>
+
 </body>
 </html>
