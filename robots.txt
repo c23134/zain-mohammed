@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://c23134.github.io/zain-mohammed/sitemap.xml
